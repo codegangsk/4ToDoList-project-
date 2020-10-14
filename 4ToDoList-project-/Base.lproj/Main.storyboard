@@ -10,7 +10,7 @@
         <!--To-Do List-->
         <scene sceneID="6DP-5Q-DQu">
             <objects>
-                <tableViewController id="W3V-oa-hMQ" sceneMemberID="viewController">
+                <tableViewController id="W3V-oa-hMQ" customClass="ToDosTableViewController" customModule="_ToDoList_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6o0-Pm-4d5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

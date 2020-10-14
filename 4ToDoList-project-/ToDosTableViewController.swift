@@ -14,6 +14,12 @@ class ToDosTableViewController: UITableViewController {
 extension ToDosTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let savedToDos = ToDo.loadToDos() {
+            toDos = savedToDos
+        } else {
+            toDos = ToDo.loadSampleToDos()
+        }
     }
 }
 
