@@ -15,6 +15,7 @@
 		2A4BD1A425369D4400C1ED67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4BD1A225369D4400C1ED67 /* LaunchScreen.storyboard */; };
 		2A4BD1AF25369D4400C1ED67 /* _ToDoList_project_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BD1AE25369D4400C1ED67 /* _ToDoList_project_Tests.swift */; };
 		2A4BD1BA25369D4400C1ED67 /* _ToDoList_project_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BD1B925369D4400C1ED67 /* _ToDoList_project_UITests.swift */; };
+		2A4BD1CB2536B61600C1ED67 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BD1CA2536B61600C1ED67 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2A4BD1B525369D4400C1ED67 /* 4ToDoList-project-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "4ToDoList-project-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4BD1B925369D4400C1ED67 /* _ToDoList_project_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _ToDoList_project_UITests.swift; sourceTree = "<group>"; };
 		2A4BD1BB25369D4400C1ED67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A4BD1CA2536B61600C1ED67 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2A4BD19925369D4400C1ED67 /* SceneDelegate.swift */,
 				2A4BD19B25369D4400C1ED67 /* ViewController.swift */,
 				2A4BD19D25369D4400C1ED67 /* Main.storyboard */,
+				2A4BD1CA2536B61600C1ED67 /* ToDo.swift */,
 				2A4BD1A025369D4400C1ED67 /* Assets.xcassets */,
 				2A4BD1A225369D4400C1ED67 /* LaunchScreen.storyboard */,
 				2A4BD1A525369D4400C1ED67 /* Info.plist */,
@@ -261,6 +264,7 @@
 				2A4BD19C25369D4400C1ED67 /* ViewController.swift in Sources */,
 				2A4BD19825369D4400C1ED67 /* AppDelegate.swift in Sources */,
 				2A4BD19A25369D4400C1ED67 /* SceneDelegate.swift in Sources */,
+				2A4BD1CB2536B61600C1ED67 /* ToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
