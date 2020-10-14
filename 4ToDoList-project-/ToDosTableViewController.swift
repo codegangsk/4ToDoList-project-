@@ -8,7 +8,7 @@
 import UIKit
 
 class ToDosTableViewController: UITableViewController {
-    var todos = [ToDo]()
+    var toDos = [ToDo]()
 }
 
 extension ToDosTableViewController {
@@ -19,6 +19,13 @@ extension ToDosTableViewController {
 
 extension ToDosTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todos.count
+        return toDos.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
+        let toDo = toDos[indexPath.row]
+        cell.textLabel?.text = toDo.title
+        return cell
     }
 }
