@@ -46,7 +46,7 @@
         <!--New ToDo-->
         <scene sceneID="ySZ-H4-vYE">
             <objects>
-                <tableViewController id="fdA-xi-9x3" sceneMemberID="viewController">
+                <tableViewController id="fdA-xi-9x3" customClass="ToDoTableViewController" customModule="_ToDoList_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Om-ux-l9x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,17 +143,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAB-47-LBy">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kQm-Op-PDi">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="rAB-47-LBy" secondAttribute="trailing" id="0tU-hx-Bts"/>
-                                                <constraint firstItem="rAB-47-LBy" firstAttribute="top" secondItem="Jh6-TI-gOf" secondAttribute="top" id="1Ym-TC-IA1"/>
-                                                <constraint firstItem="rAB-47-LBy" firstAttribute="leading" secondItem="Jh6-TI-gOf" secondAttribute="leading" id="4sT-4b-NNu"/>
-                                                <constraint firstAttribute="bottom" secondItem="rAB-47-LBy" secondAttribute="bottom" id="US0-Wq-llg"/>
+                                                <constraint firstItem="kQm-Op-PDi" firstAttribute="top" secondItem="Jh6-TI-gOf" secondAttribute="top" id="0jk-oB-UQ7"/>
+                                                <constraint firstAttribute="trailing" secondItem="kQm-Op-PDi" secondAttribute="trailing" id="2rQ-5e-iQb"/>
+                                                <constraint firstAttribute="bottom" secondItem="kQm-Op-PDi" secondAttribute="bottom" id="9FY-s8-hFe"/>
+                                                <constraint firstItem="kQm-Op-PDi" firstAttribute="leading" secondItem="Jh6-TI-gOf" secondAttribute="leading" id="hFf-Pj-AKb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -177,6 +180,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDateLabel" destination="oNT-n7-Oya" id="2en-su-r3G"/>
+                        <outlet property="dueDatePickerView" destination="Yca-eJ-uhA" id="hff-EO-PbY"/>
+                        <outlet property="isCompleteButton" destination="4fI-6H-IUF" id="wnO-T6-lss"/>
+                        <outlet property="noteTextView" destination="kQm-Op-PDi" id="6M1-xG-KSe"/>
+                        <outlet property="notesTextView" destination="kQm-Op-PDi" id="Q9h-GX-7qO"/>
+                        <outlet property="titleTextField" destination="bhn-NS-Pdq" id="qHh-9H-WcO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEE-DL-IS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fmS-gG-tm7" userLabel="Exit" sceneMemberID="exit"/>
@@ -219,6 +230,9 @@
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
