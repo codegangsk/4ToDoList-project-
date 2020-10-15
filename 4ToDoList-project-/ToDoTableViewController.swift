@@ -8,6 +8,9 @@
 import UIKit
 
 class ToDoTableViewController: UITableViewController {
+    
+    @IBOutlet var saveButton: UIBarButtonItem!
+    
     @IBOutlet var isCompleteButton: UIButton!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var dueDateLabel: UILabel!
@@ -18,6 +21,14 @@ class ToDoTableViewController: UITableViewController {
 extension ToDoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateSaveButtonState()
+    }
+}
+
+extension ToDoTableViewController {
+    func updateSaveButtonState() {
+        let text = titleTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
     }
 }
 

@@ -184,8 +184,8 @@
                         <outlet property="dueDateLabel" destination="oNT-n7-Oya" id="2en-su-r3G"/>
                         <outlet property="dueDatePickerView" destination="Yca-eJ-uhA" id="hff-EO-PbY"/>
                         <outlet property="isCompleteButton" destination="4fI-6H-IUF" id="wnO-T6-lss"/>
-                        <outlet property="noteTextView" destination="kQm-Op-PDi" id="6M1-xG-KSe"/>
                         <outlet property="notesTextView" destination="kQm-Op-PDi" id="Q9h-GX-7qO"/>
+                        <outlet property="saveButton" destination="p2L-M7-AAz" id="DVT-wc-7qI"/>
                         <outlet property="titleTextField" destination="bhn-NS-Pdq" id="qHh-9H-WcO"/>
                     </connections>
                 </tableViewController>
