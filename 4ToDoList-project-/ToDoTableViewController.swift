@@ -30,6 +30,10 @@ extension ToDoTableViewController {
         let text = titleTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
+
+    @IBAction func titleTextFieldEditingChanged(_ sender: Any) {
+        updateSaveButtonState()
+    }
 }
 
  

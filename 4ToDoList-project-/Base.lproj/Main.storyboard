@@ -65,6 +65,9 @@
                                                     <rect key="frame" x="53" y="5" width="356" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="titleTextFieldEditingChanged:" destination="fdA-xi-9x3" eventType="editingChanged" id="xlF-t8-84t"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-6H-IUF">
                                                     <rect key="frame" x="7" y="5" width="38" height="34"/>
