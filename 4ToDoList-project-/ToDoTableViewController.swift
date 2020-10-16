@@ -35,6 +35,11 @@ extension ToDoTableViewController {
         updateSaveButtonState()
     }
     
+    @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
+        isCompleteButton.isSelected = !isCompleteButton.isSelected
+    }
+    
+    
     @IBAction func keyboardReturnPressed(_ sender: UITextField) {
         titleTextField.resignFirstResponder()
     }
