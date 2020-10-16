@@ -25,6 +25,11 @@ class ToDoTableViewController: UITableViewController {
     let normalCellHeight: CGFloat = 44
     let enlargedCellHeight: CGFloat = 200
     
+    var toDo: ToDo? {
+        didSet {
+            print("\(toDo!)")
+        }
+    }
 }
 
 extension ToDoTableViewController {
@@ -88,6 +93,21 @@ extension ToDoTableViewController {
             tableView.beginUpdates()
             tableView.endUpdates()
         }
+    }
+}
+
+extension ToDoTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "SaveUnwind" else { return }
+        
+        let title = titleTextField.text!
+        let isComplete = isCompleteButton.isSelected
+        let dueDate = dueDatePickerView.date
+        let notes = notesTextView.text
+        
+        toDo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
     }
 }
 
