@@ -10,12 +10,21 @@ import UIKit
 class ToDoTableViewController: UITableViewController {
     
     @IBOutlet var saveButton: UIBarButtonItem!
-    
     @IBOutlet var isCompleteButton: UIButton!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var dueDateLabel: UILabel!
     @IBOutlet var dueDatePickerView: UIDatePicker!
     @IBOutlet var notesTextView: UITextView!
+    
+    var isPickerHidden: Bool = true
+    
+    let dateLableIndexPath = IndexPath(row: 0, section: 1)
+    let datePickerIndexPath = IndexPath(row: 1, section: 1)
+    let notesTextViewIndexPath = IndexPath(row: 0, section: 2)
+    
+    let normalCellHeight: CGFloat = 44
+    let enlargedCellHeight: CGFloat = 200
+    
 }
 
 extension ToDoTableViewController {
@@ -46,7 +55,6 @@ extension ToDoTableViewController {
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         updateDueDateLable(date: dueDatePickerView.date)
     }
-    
 }
 
 extension ToDoTableViewController {
@@ -56,6 +64,19 @@ extension ToDoTableViewController {
     
     @IBAction func keyboardReturnPressed(_ sender: UITextField) {
         titleTextField.resignFirstResponder()
+    }
+}
+
+extension ToDoTableViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath {
+        case datePickerIndexPath:
+            return isPickerHidden ? 0 : dueDatePickerView.frame.height
+        case notesTextViewIndexPath:
+            return enlargedCellHeight
+        default:
+            return normalCellHeight
+        }
     }
 }
 
