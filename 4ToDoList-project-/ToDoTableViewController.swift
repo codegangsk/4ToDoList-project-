@@ -21,8 +21,9 @@ class ToDoTableViewController: UITableViewController {
 extension ToDoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateSaveButtonState()
+        dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
         updateDueDateLable(date: dueDatePickerView.date)
+        updateSaveButtonState()
     }
 }
 
