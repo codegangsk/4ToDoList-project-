@@ -66,6 +66,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
+                                                        <action selector="keyboardReturnPressed:" destination="fdA-xi-9x3" eventType="primaryActionTriggered" id="yeh-sx-dL1"/>
                                                         <action selector="titleTextFieldEditingChanged:" destination="fdA-xi-9x3" eventType="editingChanged" id="xlF-t8-84t"/>
                                                     </connections>
                                                 </textField>

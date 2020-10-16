@@ -34,6 +34,10 @@ extension ToDoTableViewController {
     @IBAction func titleTextFieldEditingChanged(_ sender: Any) {
         updateSaveButtonState()
     }
+    
+    @IBAction func keyboardReturnPressed(_ sender: UITextField) {
+        titleTextField.resignFirstResponder()
+    }
 }
 
  
