@@ -22,6 +22,7 @@ extension ToDoTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateSaveButtonState()
+        updateDueDateLable(date: dueDatePickerView.date)
     }
 }
 
@@ -30,19 +31,32 @@ extension ToDoTableViewController {
         let text = titleTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
+    
+    func updateDueDateLable(date: Date) {
+        dueDateLabel.text = ToDo.dueDateFormatter.string(from: date)
+    }
+}
 
+extension ToDoTableViewController {
     @IBAction func titleTextFieldEditingChanged(_ sender: Any) {
         updateSaveButtonState()
     }
     
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        updateDueDateLable(date: dueDatePickerView.date)
+    }
+    
+}
+
+extension ToDoTableViewController {
     @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
         isCompleteButton.isSelected = !isCompleteButton.isSelected
     }
-    
     
     @IBAction func keyboardReturnPressed(_ sender: UITextField) {
         titleTextField.resignFirstResponder()
     }
 }
+
 
  
