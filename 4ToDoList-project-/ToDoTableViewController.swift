@@ -80,5 +80,16 @@ extension ToDoTableViewController {
     }
 }
 
+extension ToDoTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath == dateLableIndexPath {
+            isPickerHidden = !isPickerHidden
+            dueDateLabel.textColor = isPickerHidden ? .black: tableView.tintColor
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+}
+
 
  
