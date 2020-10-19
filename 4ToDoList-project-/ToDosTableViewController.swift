@@ -51,16 +51,20 @@ extension ToDosTableViewController {
 }
 
 extension ToDosTableViewController {
-    @IBAction func undoToDos(segue: UIStoryboardSegue) {
+    @IBAction func unwindToToDos(segue: UIStoryboardSegue) {
         guard segue.identifier == "SaveUnwind" else { return }
-        let sourceViewController = segue.source  as! ToDoTableViewController
+        let sourceViewController = segue.source as! ToDoTableViewController
         
         if let toDo = sourceViewController.toDo {
-            let newIndexPath = IndexPath(row: toDos.count, section: 0)
-            
-            toDos.append(toDo)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                toDos[selectedIndexPath.row] = toDo
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                let newIndexPath = IndexPath(row: toDos.count, section: 0)
+                toDos.append(toDo)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
+    }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
