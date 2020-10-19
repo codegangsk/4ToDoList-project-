@@ -34,7 +34,8 @@ extension ToDosTableViewController {
             fatalError("Could not dequeue a cell")
         }
         let toDo = toDos[indexPath.row]
-        cell.textLabel?.text = toDo.title
+        cell.titleLabel?.text = toDo.title
+        cell.isCompleteButton.isSelected = toDo.isComplete
         return cell
     }
 }

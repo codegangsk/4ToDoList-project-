@@ -17,13 +17,40 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="hTw-0m-HA9" customClass="ToDoCell" customModule="_ToDoList_project_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="32.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hTw-0m-HA9" id="k2G-YX-4VC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="32.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC1-XN-EeE">
+                                            <rect key="frame" x="8" y="5" width="38" height="22.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="38" id="jhy-D9-duh"/>
+                                            </constraints>
+                                            <state key="normal" image="circle" catalog="system"/>
+                                            <state key="selected" image="checkmark.circle" catalog="system"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-h9-SjO">
+                                            <rect key="frame" x="51" y="5" width="358" height="22.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Eat-h9-SjO" firstAttribute="top" secondItem="k2G-YX-4VC" secondAttribute="top" constant="5" id="ASr-TP-5yH"/>
+                                        <constraint firstAttribute="trailing" secondItem="Eat-h9-SjO" secondAttribute="trailing" constant="5" id="Jci-MC-wVa"/>
+                                        <constraint firstAttribute="bottom" secondItem="Eat-h9-SjO" secondAttribute="bottom" constant="5" id="WhV-aO-gJP"/>
+                                        <constraint firstItem="RC1-XN-EeE" firstAttribute="top" secondItem="k2G-YX-4VC" secondAttribute="top" constant="5" id="Xzl-gF-i5J"/>
+                                        <constraint firstAttribute="bottom" secondItem="RC1-XN-EeE" secondAttribute="bottom" constant="5" id="d6z-bu-Bud"/>
+                                        <constraint firstItem="Eat-h9-SjO" firstAttribute="leading" secondItem="RC1-XN-EeE" secondAttribute="trailing" constant="5" id="fvR-Sa-e4R"/>
+                                        <constraint firstItem="RC1-XN-EeE" firstAttribute="leading" secondItem="k2G-YX-4VC" secondAttribute="leading" constant="8" id="l0f-v9-Kpi"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="RC1-XN-EeE" id="FMf-FW-XhS"/>
+                                    <outlet property="titleLabel" destination="Eat-h9-SjO" id="diF-4Z-3C1"/>
                                     <segue destination="fdA-xi-9x3" kind="show" identifier="EditToDo" id="knN-oG-DXe"/>
                                 </connections>
                             </tableViewCell>
@@ -44,7 +71,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmw-EN-2ZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="-404"/>
+            <point key="canvasLocation" x="489.85507246376818" y="-404.46428571428572"/>
         </scene>
         <!--New ToDo-->
         <scene sceneID="ySZ-H4-vYE">
@@ -65,7 +92,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remind me to..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-NS-Pdq">
-                                                    <rect key="frame" x="53" y="5" width="356" height="34"/>
+                                                    <rect key="frame" x="54" y="5" width="355" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
@@ -74,7 +101,7 @@
                                                     </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-6H-IUF">
-                                                    <rect key="frame" x="7" y="5" width="38" height="34"/>
+                                                    <rect key="frame" x="8" y="5" width="38" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="38" id="QU0-Cd-4an"/>
                                                     </constraints>
@@ -91,7 +118,7 @@
                                                 <constraint firstItem="bhn-NS-Pdq" firstAttribute="top" secondItem="GsM-6x-HOo" secondAttribute="top" constant="5" id="EW3-xQ-lUy"/>
                                                 <constraint firstAttribute="bottom" secondItem="4fI-6H-IUF" secondAttribute="bottom" constant="5" id="IKR-bK-eyP"/>
                                                 <constraint firstItem="bhn-NS-Pdq" firstAttribute="leading" secondItem="4fI-6H-IUF" secondAttribute="trailing" constant="8" symbolic="YES" id="QIL-Gt-j5V"/>
-                                                <constraint firstItem="4fI-6H-IUF" firstAttribute="leading" secondItem="GsM-6x-HOo" secondAttribute="leadingMargin" constant="-13" id="Rha-R0-Y4V"/>
+                                                <constraint firstItem="4fI-6H-IUF" firstAttribute="leading" secondItem="GsM-6x-HOo" secondAttribute="leading" constant="8" id="XjR-dr-0zl"/>
                                                 <constraint firstAttribute="trailing" secondItem="bhn-NS-Pdq" secondAttribute="trailing" constant="5" id="j6q-0f-ftN"/>
                                             </constraints>
                                         </tableViewCellContentView>
