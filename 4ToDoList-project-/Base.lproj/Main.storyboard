@@ -30,6 +30,9 @@
                                             </constraints>
                                             <state key="normal" image="circle" catalog="system"/>
                                             <state key="selected" image="checkmark.circle" catalog="system"/>
+                                            <connections>
+                                                <action selector="isCompleteButtonTapped:" destination="hTw-0m-HA9" eventType="touchUpInside" id="fW8-Jp-kXU"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-h9-SjO">
                                             <rect key="frame" x="51" y="5" width="358" height="22.5"/>
