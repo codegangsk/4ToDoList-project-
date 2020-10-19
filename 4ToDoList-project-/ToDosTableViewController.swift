@@ -14,6 +14,7 @@ class ToDosTableViewController: UITableViewController, ToDoCellDelegate {
             toDo.isComplete = !toDo.isComplete
             toDos[indexPath.row] = toDo
             tableView.reloadRows(at: [indexPath], with: .automatic)
+            ToDo.saveToDos(toDos)
         }
     }
     
@@ -59,6 +60,7 @@ extension ToDosTableViewController {
         if editingStyle == .delete {
             toDos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            ToDo.saveToDos(toDos)
         }
     }
 }
@@ -78,6 +80,7 @@ extension ToDosTableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
+        ToDo.saveToDos(toDos)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
