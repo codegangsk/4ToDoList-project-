@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A49E2C7253D583D00F85239 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49E2C6253D583D00F85239 /* ToDoCell.swift */; };
 		2A4BD19825369D4400C1ED67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BD19725369D4400C1ED67 /* AppDelegate.swift */; };
 		2A4BD19A25369D4400C1ED67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BD19925369D4400C1ED67 /* SceneDelegate.swift */; };
 		2A4BD19C25369D4400C1ED67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BD19B25369D4400C1ED67 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A49E2C6253D583D00F85239 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		2A4BD19425369D4400C1ED67 /* 4ToDoList-project-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4ToDoList-project-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4BD19725369D4400C1ED67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4BD19925369D4400C1ED67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		2A4BD18B25369D4400C1ED67 = {
 			isa = PBXGroup;
 			children = (
+				2A49E2C6253D583D00F85239 /* ToDoCell.swift */,
 				2A4BD19625369D4400C1ED67 /* 4ToDoList-project- */,
 				2A4BD1AD25369D4400C1ED67 /* 4ToDoList-project-Tests */,
 				2A4BD1B825369D4400C1ED67 /* 4ToDoList-project-UITests */,
@@ -269,6 +272,7 @@
 			files = (
 				2A4BD1D02536BAFB00C1ED67 /* ToDosTableViewController.swift in Sources */,
 				2A4BD1D82538058200C1ED67 /* ToDoTableViewController.swift in Sources */,
+				2A49E2C7253D583D00F85239 /* ToDoCell.swift in Sources */,
 				2A4BD19C25369D4400C1ED67 /* ViewController.swift in Sources */,
 				2A4BD19825369D4400C1ED67 /* AppDelegate.swift in Sources */,
 				2A4BD19A25369D4400C1ED67 /* SceneDelegate.swift in Sources */,

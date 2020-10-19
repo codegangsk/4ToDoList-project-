@@ -30,7 +30,9 @@ extension ToDosTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell") as? ToDoCell else {
+            fatalError("Could not dequeue a cell")
+        }
         let toDo = toDos[indexPath.row]
         cell.textLabel?.text = toDo.title
         return cell
