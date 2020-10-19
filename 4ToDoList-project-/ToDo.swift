@@ -7,16 +7,14 @@
 
 import UIKit
 
-struct ToDo {
+struct ToDo: Codable {
     var title: String
     var isComplete: Bool
     var dueDate: Date
     var notes: String?
     
-    
-    static func loadToDos() -> [ToDo]? {
-        return nil
-    }
+    static let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("toDos").appendingPathExtension("plist")
     
     static func loadSampleToDos() -> [ToDo] {
         let toDo1 = ToDo(title: "ToDo One", isComplete: false, dueDate: Date(), notes: "Notes 1")
