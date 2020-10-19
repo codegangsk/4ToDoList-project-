@@ -22,7 +22,12 @@ struct ToDo: Codable {
         let propertyListDecoder = PropertyListDecoder()
         return try? propertyListDecoder.decode(Array <ToDo>.self, from: codedToDos)
     }
-
+    
+    static func saveToDos(_ toDos: [ToDo]) {
+        let propertyListEncoder = PropertyListEncoder()
+        let codedToDos = try? propertyListEncoder.encode(toDos)
+        try? codedToDos?.write(to: ArchiveURL, options: .noFileProtection)
+    }
     static func loadSampleToDos() -> [ToDo] {
         let toDo1 = ToDo(title: "ToDo One", isComplete: false, dueDate: Date(), notes: "Notes 1")
         let toDo2 = ToDo(title: "ToDo Two", isComplete: false, dueDate: Date(), notes: "Notes 2")
