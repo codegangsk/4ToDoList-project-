@@ -23,6 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fdA-xi-9x3" kind="show" identifier="EditToDo" id="knN-oG-DXe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +37,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="tbQ-5K-lHE"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KAR-Y5-BLl">
                             <connections>
-                                <segue destination="ImP-u9-Ztx" kind="presentation" id="yAM-dn-yG2"/>
+                                <segue destination="ImP-u9-Ztx" kind="presentation" identifier="EditToDo" id="yAM-dn-yG2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -48,7 +51,7 @@
             <objects>
                 <tableViewController id="fdA-xi-9x3" customClass="ToDoTableViewController" customModule="_ToDoList_project_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Om-ux-l9x">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -236,6 +239,9 @@
             <point key="canvasLocation" x="-397" y="-404"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="knN-oG-DXe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>

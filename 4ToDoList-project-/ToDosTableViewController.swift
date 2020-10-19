@@ -62,4 +62,13 @@ extension ToDosTableViewController {
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditToDo" {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let toDoTableViewController = segue.destination as! ToDoTableViewController
+            let selectedToDo = toDos[indexPath.row]
+            toDoTableViewController.toDo = selectedToDo
+        }
+    }
 }
